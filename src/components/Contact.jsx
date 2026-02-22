@@ -33,7 +33,7 @@ export default function Contact() {
       .catch((error) => {
         setLoading(false);
         console.error(error);
-        alert("❌ Failed to send message");
+        alert("❌ Failed to send messages");
       });
   };
 
