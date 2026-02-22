@@ -27,7 +27,7 @@ export default function Contact() {
       )
       .then(() => {
         setLoading(false);
-        alert("✅ Message sent successfully!");
+        alert("✅ Message sent successfully!!");
         formRef.current.reset();
       })
       .catch((error) => {
