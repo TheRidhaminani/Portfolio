@@ -5,20 +5,23 @@ import {
   FaRocket,
   FaPuzzlePiece,
   FaLayerGroup,
+  FaChartBar,
+  FaDatabase,
+  FaBrain,
+  FaChartLine,
+  FaLightbulb,
 } from "react-icons/fa";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen bg-[#0b0f1a] 
-      flex items-center justify-center"
+      className="relative min-h-screen bg-[#0A0F1F] flex items-center justify-center"
     >
-      {/* CENTER WRAPPER (IMPORTANT) */}
       <div className="w-full flex justify-center">
-        {/* CONTENT BOX (MATCHES SKILLS WIDTH) */}
         <div className="max-w-6xl w-full px-6 py-24">
-          {/* TITLE — CENTERED LIKE SKILLS */}
+          
+          {/* TITLE */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -26,11 +29,11 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
           >
-            About <span className="text-orange-500">Me</span>
+            About <span className="text-cyan-400">Me</span>
           </motion.h2>
 
-          {/* TWO COLUMN CONTENT */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
+            
             {/* LEFT TEXT */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -42,40 +45,39 @@ export default function About() {
               <p>
                 Hi, I’m{" "}
                 <span className="text-white font-semibold">
-                  Priyanshu Kumar
+                  Ridham Inani
                 </span>{" "}
                 — a{" "}
-                <span className="text-orange-400">MERN Stack Developer</span>{" "}
-                passionate about building fast, scalable, and user-centric web
-                applications.
+                <span className="text-cyan-400">
+                  Data Analyst & Machine Learning Enthusiast
+                </span>{" "}
+                passionate about transforming raw data into actionable insights and building data-driven solutions.
               </p>
 
               <p>
-                Over the past year, I’ve built and deployed full-stack
-                applications with authentication, APIs, and database integration
-                using{" "}
-                <span className="text-orange-400">
-                  React, Node.js, Express, MongoDB, and Tailwind CSS
-                </span>
-                .
+                Over the past year, I’ve analyzed complex datasets, built interactive dashboards, and developed machine learning models using{" "}
+                <span className="text-cyan-400">
+                  Python, SQL, Power BI, Pandas, NumPy, and Scikit-learn
+                </span>{" "}
+                to uncover insights and support data-driven decision-making.
               </p>
 
               <p>
-                I enjoy turning ideas into smooth, functional products and
-                continuously improving my craft as a{" "}
-                <span className="text-white">developer and problem-solver</span>
-                .
+                I’m passionate about uncovering patterns in data, solving real-world problems, and continuously refining my expertise as a{" "}
+                <span className="text-white">data-driven problem solver</span>.
               </p>
 
               {/* STATS */}
               <div className="mt-10 grid grid-cols-2 gap-6">
-                <div className="border border-orange-500/30 rounded-xl p-5 text-center">
-                  <h3 className="text-3xl font-bold text-orange-400">10+</h3>
+                <div className="border border-cyan-400/30 rounded-xl p-5 text-center bg-white/5 backdrop-blur-md
+                                hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition">
+                  <h3 className="text-3xl font-bold text-cyan-400">10+</h3>
                   <p className="text-gray-400 mt-1">Projects Completed</p>
                 </div>
 
-                <div className="border border-orange-500/30 rounded-xl p-5 text-center">
-                  <h3 className="text-3xl font-bold text-orange-400">2+</h3>
+                <div className="border border-cyan-400/30 rounded-xl p-5 text-center bg-white/5 backdrop-blur-md
+                                hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition">
+                  <h3 className="text-3xl font-bold text-cyan-400">2+</h3>
                   <p className="text-gray-400 mt-1">Years Experience</p>
                 </div>
               </div>
@@ -96,10 +98,10 @@ export default function About() {
                 transition={{ duration: 0.5 }}
                 whileHover={{ y: -6 }}
                 className="max-w-md w-full rounded-2xl p-8
-  border border-orange-500/40
-  backdrop-blur-md bg-white/5
-  hover:shadow-[0_0_30px_rgba(249,115,22,0.35)]
-  transition-all duration-300"
+                border border-cyan-400/30
+                backdrop-blur-md bg-white/5
+                hover:shadow-[0_0_30px_rgba(34,211,238,0.35)]
+                transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-6 text-center">
                   What I Do 🚀
@@ -107,41 +109,44 @@ export default function About() {
 
                 <ul className="space-y-5 text-gray-300">
                   <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaLaptopCode />
+                    <span className="text-cyan-400 text-lg">
+                      <FaChartBar />
                     </span>
-                    <span>Build responsive web applications</span>
+                    <span>Perform exploratory data analysis (EDA) to uncover trends & insights</span>
                   </li>
 
                   <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaServer />
+                    <span className="text-cyan-400 text-lg">
+                      <FaDatabase />
                     </span>
-                    <span>Design & develop RESTful APIs</span>
+                    <span>Query and manage structured data using SQL</span>
                   </li>
 
                   <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaRocket />
+                    <span className="text-cyan-400 text-lg">
+                      <FaBrain />
                     </span>
-                    <span>Optimize UI performance & speed</span>
-                  </li>
-                  <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaPuzzlePiece />
-                    </span>
-                    <span>Create reusable, scalable components</span>
+                    <span>Develop machine learning models for predictive analysis</span>
                   </li>
 
                   <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaLayerGroup />
+                    <span className="text-cyan-400 text-lg">
+                      <FaChartLine />
                     </span>
-                    <span>Maintain clean & maintainable code</span>
+                    <span>Build interactive dashboards using Power BI</span>
+                  </li>
+
+                  <li className="flex items-center gap-4">
+                    <span className="text-cyan-400 text-lg">
+                      <FaLightbulb />
+                    </span>
+                    <span>Transform raw data into actionable business insights</span>
                   </li>
                 </ul>
+
               </motion.div>
             </motion.div>
+
           </div>
         </div>
       </div>

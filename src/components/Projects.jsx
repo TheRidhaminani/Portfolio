@@ -1,61 +1,55 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
-  
   {
-    title: "📝 Blog App",
+    title: "🫁 Lung Disease Diagnosis",
     description:
-      "A dynamic and responsive blog application built with React that allows users to read, browse, and interact with blog posts.",
-    tech: ["React.js", "JavaScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Render"],
-    github: "https://github.com/Priyanshu11singh/Blog-App",
-    live: "https://blog-app-client-5e8l.onrender.com/",
+      "A machine learning project that predicts lung diseases using medical data and classification algorithms with data preprocessing, feature engineering, and model evaluation.",
+    tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
+    github: "YOUR_GITHUB_LINK",
   },
   {
-    title: "📈 Trading Platform",
+    title: "🎣 Phishing Website Classifier",
     description:
-      "A full-stack trading platform that allows users to analyze market data, manage trades, and track performance.",
-    tech: ["React", "Bootstrap", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/Priyanshu11singh",
-    live: "#",
+      "A classification model that detects phishing websites using URL-based and domain-based features to enhance cybersecurity detection.",
+    tech: ["Python", "Scikit-learn", "Logistic Regression", "Random Forest", "EDA"],
+    github: "YOUR_GITHUB_LINK",
   },
   {
-    title: "🎨 Portfolio Website",
+    title: "👥 Customer Segmentation",
     description:
-      "A modern personal portfolio built using React and Tailwind CSS showcasing skills and projects.",
-    tech: ["React", "Tailwind CSS"],
-    github: "https://github.com/Priyanshu11singh",
-    live: "#",
+      "Performed customer segmentation using clustering techniques to identify distinct customer groups and support targeted marketing strategies.",
+    tech: ["Python", "Pandas", "K-Means", "Matplotlib", "Seaborn"],
+    github: "YOUR_GITHUB_LINK",
   },
   {
-    title: "🖥️ Web Application UI",
+    title: "💳 Credit Card Fraud Detection",
     description:
-      "A responsive and clean UI built with reusable components and optimized performance.",
-    tech: ["React", "JavaScript", "CSS"],
-    github: "https://github.com/Priyanshu11singh",
-    live: "#",
+      "Built a fraud detection system using supervised learning models to identify fraudulent transactions with high precision and recall.",
+    tech: ["Python", "Scikit-learn", "Logistic Regression", "Decision Trees", "Imbalanced Data Handling"],
+    github: "YOUR_GITHUB_LINK",
   },
   {
-    title: "🛒 Grocery Website",
+    title: "⚙️ Sensor Fault Detection",
     description:
-      "A multi-page grocery shopping website built with React and Tailwind CSS.",
-    tech: ["React", "Tailwind CSS", "JavaScript"],
-    github: "https://github.com/Priyanshu11singh/Multipage-Grocery-Website-with-React-Tailwind-CSS",
-    live: "#",
+      "Developed a predictive maintenance model to detect faulty sensors using anomaly detection and classification techniques.",
+    tech: ["Python", "Pandas", "NumPy", "Machine Learning", "Data Visualization"],
+    github: "YOUR_GITHUB_LINK",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="bg-[#0f172a] py-24 px-6" id="projects">
+    <section className="bg-[#0A0F1F] py-24 px-6" id="projects">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white">
-            My <span className="text-orange-400">Projects</span>
+            My <span className="text-cyan-400">Projects</span>
           </h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-            A showcase of my work, skills, and experience in frontend development.
+            A showcase of my work in Data Analytics, Machine Learning, and predictive modeling.
           </p>
         </div>
 
@@ -64,7 +58,9 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-[#020617] border border-gray-800 rounded-xl p-6 hover:border-orange-400 transition duration-300"
+              className="bg-[#0F172A] border border-cyan-400/10 rounded-xl p-6 
+                         hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 
+                         transition duration-300"
             >
               <h3 className="text-xl font-semibold text-white mb-3">
                 {project.title}
@@ -75,37 +71,27 @@ export default function Projects() {
               </p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full"
+                    className="text-xs bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              {/* Links */}
-              <div className="flex gap-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-300 hover:text-white flex items-center gap-2"
-                >
-                  <FaGithub /> GitHub
-                </a>
-
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-300 hover:text-white flex items-center gap-2"
-                >
-                  <FaExternalLinkAlt /> Live
-                </a>
-              </div>
+              {/* GitHub Link */}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-gray-300 
+                           hover:text-cyan-400 transition"
+              >
+                <FaGithub /> View on GitHub
+              </a>
             </div>
           ))}
         </div>

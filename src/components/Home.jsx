@@ -1,29 +1,29 @@
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
-import profile from "../assets/profile.png";
-import cv from "../assets/Priyanshu_Kumar_CV.pdf";
+import profile from "../assets/profile.jpg";
+import cv from "../assets/RidhamInaniResume.pdf";
 
 export default function Home() {
   return (
     <section
       id="home"
       className="relative min-h-screen bg-gradient-to-br 
-      from-[#0b1020] via-[#0f172a] to-[#020617] flex items-center overflow-hidden"
+      from-[#0A0F1F] via-[#0F172A] to-[#020617] flex items-center overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 
-      w-[600px] h-[600px] bg-orange-500/20 blur-[160px]" />
+      w-[600px] h-[600px] bg-cyan-500/20 blur-[160px]" />
 
       {/* Social Icons */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-4 z-20">
         {[
           {
             icon: <FaLinkedinIn />,
-            link: "https://www.linkedin.com/in/priyanshukumar1105/",
+            link: "https://www.linkedin.com/in/theridhaminani",
           },
           {
             icon: <FaGithub />,
-            link: "https://github.com/Priyanshu11singh",
+            link: "https://github.com/TheRidhaminani",
           },
           {
             icon: <FaTwitter />,
@@ -31,7 +31,7 @@ export default function Home() {
           },
           {
             icon: <FaEnvelope />,
-            link: "https://mail.google.com/mail/?view=cm&fs=1&to=rpriyanshusingh56@gmail.com",
+            link: "https://mail.google.com/mail/?view=cm&fs=1&to=inaniridham@gmail.com",
           },
         ].map((item, i) => (
           <motion.a
@@ -42,9 +42,9 @@ export default function Home() {
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
             className="w-11 h-11 flex items-center justify-center rounded-full
-            border border-orange-500/40 text-orange-400
-            hover:bg-orange-500 hover:text-black
-            hover:shadow-[0_0_20px_rgba(249,115,22,0.6)]
+            border border-cyan-400/40 text-cyan-400
+            hover:bg-cyan-400 hover:text-black
+            hover:shadow-[0_0_20px_rgba(6,182,212,0.6)]
             transition-all duration-300"
           >
             {item.icon}
@@ -64,30 +64,31 @@ export default function Home() {
         >
           {/* Badge */}
           <span className="inline-block mb-4 px-4 py-1 rounded-full 
-          bg-orange-500/10 text-orange-400 text-sm tracking-wide">
+          bg-cyan-400/10 text-cyan-400 text-sm tracking-wide">
             👋 Welcome to my portfolio
           </span>
 
           <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
             Hi, I’m <br />
-            <span className="bg-gradient-to-r from-orange-400 to-pink-500 
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 
             bg-clip-text text-transparent">
-              Priyanshu Kumar
+              Ridham Inani
             </span>
           </h1>
 
           <p className="mt-5 text-gray-400 text-lg max-w-xl mx-auto md:mx-0">
-            A <span className="text-white">MERN Stack Developer</span> crafting
-            modern, scalable, and user-focused digital experiences.
+            A <span className="text-white">Data Analyst</span> transforming raw data 
+            into actionable insights through EDA, interactive dashboards, 
+            and machine learning solutions.
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-8 flex gap-4 justify-center md:justify-start flex-wrap">
             <a
               href={cv}
-              download="Priyanshu_Kumar_CV.pdf"
-              className="px-7 py-3 bg-orange-500 text-black rounded-lg font-semibold
-              hover:bg-orange-600 hover:shadow-[0_0_25px_rgba(249,115,22,0.7)]
+              download="RidhamInaniResume.pdf"
+              className="px-7 py-3 bg-cyan-400 text-black rounded-lg font-semibold
+              hover:bg-cyan-500 hover:shadow-[0_0_25px_rgba(6,182,212,0.7)]
               active:scale-95 transition-all duration-300"
             >
               Download CV
@@ -95,9 +96,9 @@ export default function Home() {
 
             <a
               href="#about"
-              className="px-7 py-3 border border-orange-500 text-orange-400 
-              rounded-lg hover:bg-orange-500 hover:text-black
-              hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]
+              className="px-7 py-3 border border-cyan-400 text-cyan-400 
+              rounded-lg hover:bg-cyan-400 hover:text-black
+              hover:shadow-[0_0_20px_rgba(6,182,212,0.5)]
               transition-all duration-300"
             >
               About Me
@@ -119,8 +120,8 @@ export default function Home() {
           >
             {/* Glow Ring */}
             <div className="absolute inset-0 rounded-2xl 
-            border-4 border-orange-500 
-            shadow-[0_0_50px_rgba(249,115,22,0.6)]" />
+            border-4 border-cyan-400 
+            shadow-[0_0_50px_rgba(6,182,212,0.6)]" />
 
             <img
               src={profile}
@@ -136,7 +137,7 @@ export default function Home() {
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.4 }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 
-        text-orange-400 text-sm tracking-wide"
+        text-cyan-400 text-sm tracking-wide"
       >
         ↓ Scroll Down
       </motion.div>

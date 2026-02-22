@@ -20,10 +20,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_0e84pmb",        // Service ID
-        "template_rbq426j",        // Template ID
+        "service_0e84pmb",
+        "template_rbq426j",
         formRef.current,
-        "-3M5vSi61s7qTIcL-"        // Public Key
+        "-3M5vSi61s7qTIcL-"
       )
       .then(() => {
         setLoading(false);
@@ -40,12 +40,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen bg-gradient-to-br from-[#0b1020] via-[#0f172a] to-[#020617] py-28"
+      className="relative min-h-screen bg-gradient-to-br from-[#0A0F1F] via-[#0F172A] to-[#020617] py-28"
     >
-      {/* Glow Effect */}
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-orange-500/20 blur-[160px]" />
+      {/* Cyan Glow */}
+      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-500/20 blur-[160px]" />
 
       <div className="relative max-w-6xl mx-auto px-6">
+        
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -55,15 +56,14 @@ export default function Contact() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Get In <span className="text-orange-500">Touch</span>
+            Get In <span className="text-cyan-400">Touch</span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-xl mx-auto">
-            Have a project in mind or want to collaborate?  
-            Let’s build something amazing together.
+            Open to data analytics, machine learning and dashboard development opportunities. 
+            Let’s connect and create something impactful together.
           </p>
         </motion.div>
 
-        {/* Content */}
         <div className="mt-16 grid md:grid-cols-2 gap-14 items-center">
           
           {/* Contact Info */}
@@ -74,26 +74,18 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="flex items-center gap-4">
-              <div className="p-3 rounded-full bg-orange-500/20 text-orange-400">
-                <FaEnvelope />
+            {[
+              { icon: <FaEnvelope />, text: "inaniridham@gmail.com" },
+              { icon: <FaPhoneAlt />, text: "+91 9680715444" },
+              { icon: <FaMapMarkerAlt />, text: "India" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <div className="p-3 rounded-full bg-cyan-500/20 text-cyan-400">
+                  {item.icon}
+                </div>
+                <p className="text-gray-300">{item.text}</p>
               </div>
-              <p className="text-gray-300">rpriyanshusingh56@gmail.com</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="p-3 rounded-full bg-orange-500/20 text-orange-400">
-                <FaPhoneAlt />
-              </div>
-              <p className="text-gray-300">+91 9608529833</p>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="p-3 rounded-full bg-orange-500/20 text-orange-400">
-                <FaMapMarkerAlt />
-              </div>
-              <p className="text-gray-300">India</p>
-            </div>
+            ))}
 
             {/* Social Icons */}
             <motion.div
@@ -105,11 +97,11 @@ export default function Contact() {
               {[
                 {
                   icon: <FaLinkedinIn />,
-                  link: "https://www.linkedin.com/in/your-linkedin-username",
+                  link: "https://www.linkedin.com/in/theridhaminani",
                 },
                 {
                   icon: <FaGithub />,
-                  link: "https://github.com/Priyanshu11singh",
+                  link: "https://github.com/TheRidhaminani",
                 },
                 {
                   icon: <FaTwitter />,
@@ -117,7 +109,7 @@ export default function Contact() {
                 },
                 {
                   icon: <FaEnvelope />,
-                  link: "https://mail.google.com/mail/?view=cm&fs=1&to=rpriyanshusingh56@gmail.com",
+                  link: "https://mail.google.com/mail/?view=cm&fs=1&to=inaniridham@gmail.com",
                 },
               ].map((item, i) => (
                 <motion.a
@@ -128,9 +120,9 @@ export default function Contact() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-11 h-11 flex items-center justify-center rounded-full
-                  border border-orange-500/40 text-orange-400
-                  hover:bg-orange-500 hover:text-black
-                  hover:shadow-[0_0_20px_rgba(249,115,22,0.6)]
+                  border border-cyan-400/40 text-cyan-400
+                  hover:bg-cyan-400 hover:text-black
+                  hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]
                   transition-all duration-300"
                 >
                   {item.icon}
@@ -147,16 +139,16 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white/5 border border-orange-500/30 rounded-2xl p-8 backdrop-blur-lg"
+            className="bg-white/5 border border-cyan-400/30 rounded-2xl p-8 backdrop-blur-lg"
           >
             <input
               type="text"
               name="user_name"
               placeholder="Your Name"
               required
-              className="w-full mb-4 bg-transparent border border-orange-500/30 rounded-lg px-4 py-3
-              text-white focus:outline-none focus:border-orange-500
-              focus:shadow-[0_0_12px_rgba(249,115,22,0.4)] transition"
+              className="w-full mb-4 bg-transparent border border-cyan-400/30 rounded-lg px-4 py-3
+              text-white focus:outline-none focus:border-cyan-400
+              focus:shadow-[0_0_12px_rgba(34,211,238,0.4)] transition"
             />
 
             <input
@@ -164,9 +156,9 @@ export default function Contact() {
               name="user_email"
               placeholder="Your Email"
               required
-              className="w-full mb-4 bg-transparent border border-orange-500/30 rounded-lg px-4 py-3
-              text-white focus:outline-none focus:border-orange-500
-              focus:shadow-[0_0_12px_rgba(249,115,22,0.4)] transition"
+              className="w-full mb-4 bg-transparent border border-cyan-400/30 rounded-lg px-4 py-3
+              text-white focus:outline-none focus:border-cyan-400
+              focus:shadow-[0_0_12px_rgba(34,211,238,0.4)] transition"
             />
 
             <textarea
@@ -174,16 +166,16 @@ export default function Contact() {
               rows="4"
               placeholder="Your Message"
               required
-              className="w-full mb-6 bg-transparent border border-orange-500/30 rounded-lg px-4 py-3
-              text-white focus:outline-none focus:border-orange-500
-              focus:shadow-[0_0_12px_rgba(249,115,22,0.4)] transition"
+              className="w-full mb-6 bg-transparent border border-cyan-400/30 rounded-lg px-4 py-3
+              text-white focus:outline-none focus:border-cyan-400
+              focus:shadow-[0_0_12px_rgba(34,211,238,0.4)] transition"
             ></textarea>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-orange-500 text-black font-semibold rounded-lg
-              hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.6)]
+              className="w-full py-3 bg-cyan-400 text-black font-semibold rounded-lg
+              hover:bg-cyan-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]
               active:scale-95 transition-all duration-300 disabled:opacity-60"
             >
               {loading ? "Sending..." : "Send Message"}
