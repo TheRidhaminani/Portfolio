@@ -20,10 +20,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_0e84pmb",
-        "template_rbq426j",
+        "service_ki0a48n",
+        "template_h7bx9sg",
         formRef.current,
-        "-3M5vSi61s7qTIcL-"
+        "w88_Wq3NPxN9enjyU"
       )
       .then(() => {
         setLoading(false);
