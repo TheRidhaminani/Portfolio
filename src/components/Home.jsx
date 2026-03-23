@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaLinkedinIn, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
-import profile from "../assets/profile.png";
-import cv from "../assets/Priyanshu_Kumar_CV.pdf";
+import profile from "../assets/profile.jpg";
+import cv from "../assets/RidhamInaniResume.pdf";
 
 export default function Home() {
   return (
@@ -19,11 +19,11 @@ export default function Home() {
         {[
           {
             icon: <FaLinkedinIn />,
-            link: "https://www.linkedin.com/in/priyanshukumar1105/",
+            link: "https://www.linkedin.com/in/theridhaminani",
           },
           {
             icon: <FaGithub />,
-            link: "https://github.com/Priyanshu11singh",
+            link: "https://github.com/TheRidhaminani",
           },
           {
             icon: <FaTwitter />,
@@ -31,7 +31,7 @@ export default function Home() {
           },
           {
             icon: <FaEnvelope />,
-            link: "https://mail.google.com/mail/?view=cm&fs=1&to=rpriyanshusingh56@gmail.com",
+            link: "https://mail.google.com/mail/?view=cm&fs=1&to=inaniridham@gmail.com",
           },
         ].map((item, i) => (
           <motion.a
@@ -72,20 +72,21 @@ export default function Home() {
             Hi, I’m <br />
             <span className="bg-gradient-to-r from-orange-400 to-pink-500 
             bg-clip-text text-transparent">
-              Priyanshu Kumar
+              Ridham Inani
             </span>
           </h1>
 
           <p className="mt-5 text-gray-400 text-lg max-w-xl mx-auto md:mx-0">
-            A <span className="text-white">MERN Stack Developer</span> crafting
-            modern, scalable, and user-focused digital experiences.
-          </p>
+  A <span className="text-white">Data Analyst</span> transforming raw data 
+  into actionable insights through EDA, interactive dashboards, 
+  and machine learning solutions.
+</p>
 
           {/* CTA Buttons */}
           <div className="mt-8 flex gap-4 justify-center md:justify-start flex-wrap">
             <a
               href={cv}
-              download="Priyanshu_Kumar_CV.pdf"
+              download="RidhamInaniResume.pdf"
               className="px-7 py-3 bg-orange-500 text-black rounded-lg font-semibold
               hover:bg-orange-600 hover:shadow-[0_0_25px_rgba(249,115,22,0.7)]
               active:scale-95 transition-all duration-300"

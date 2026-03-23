@@ -1,42 +1,49 @@
 import { motion } from "framer-motion";
 
 const skills = {
-  Frontend: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React.js",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Responsive Design",
-    "SASS",
-    "Figma",
-    "Next.js",
-  ],
-  Backend: [
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "REST APIs",
-    "Authentication",
-    "JWT",
-    "Microservices",
-    "Redis",
-  ],
-  Programming: [
-    "JavaScript",
+  "Programming & Core": [
     "Python",
-    "Java",
-    "TypeScript",
+    "SQL",
     "Data Structures",
     "Algorithms",
+    "OOP",
   ],
-  "Tools & Others": [
+
+  "Data Analysis & Visualization": [
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Power BI",
+    "Exploratory Data Analysis (EDA)",
+    "Data Cleaning",
+    "Feature Engineering",
+  ],
+
+  "Machine Learning": [
+    "Supervised Learning",
+    "Unsupervised Learning",
+    "Regression",
+    "Classification",
+    "Clustering (K-Means)",
+    "Model Evaluation",
+    "Scikit-learn",
+  ],
+
+  "Deep Learning": [
+    "Neural Networks",
+    "ANN",
+    "CNN (Basics)",
+    "TensorFlow",
+    "Keras",
+  ],
+
+  "Tools & Platforms": [
     "Git & GitHub",
+    "Jupyter Notebook",
+    "Google Colab",
     "VS Code",
-    "Webpack",
-    "NPM",
-    "Agile / Scrum",
+    "Kaggle",
   ],
 };
 

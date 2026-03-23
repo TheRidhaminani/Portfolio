@@ -58,9 +58,9 @@ export default function Contact() {
             Get In <span className="text-orange-500">Touch</span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-xl mx-auto">
-            Have a project in mind or want to collaborate?  
-            Let’s build something amazing together.
-          </p>
+  Open to data analytics, machine learning and dashboard development opportunities. 
+  Let’s connect and create something impactful together.
+</p>
         </motion.div>
 
         {/* Content */}
@@ -78,14 +78,14 @@ export default function Contact() {
               <div className="p-3 rounded-full bg-orange-500/20 text-orange-400">
                 <FaEnvelope />
               </div>
-              <p className="text-gray-300">rpriyanshusingh56@gmail.com</p>
+              <p className="text-gray-300">inaniridham@gmail.com</p>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-full bg-orange-500/20 text-orange-400">
                 <FaPhoneAlt />
               </div>
-              <p className="text-gray-300">+91 9608529833</p>
+              <p className="text-gray-300">+91 9680715444</p>
             </div>
 
             <div className="flex items-center gap-4">
@@ -105,11 +105,11 @@ export default function Contact() {
               {[
                 {
                   icon: <FaLinkedinIn />,
-                  link: "https://www.linkedin.com/in/your-linkedin-username",
+                  link: "https://www.linkedin.com/in/theridhaminani",
                 },
                 {
                   icon: <FaGithub />,
-                  link: "https://github.com/Priyanshu11singh",
+                  link: "https://github.com/TheRidhaminani",
                 },
                 {
                   icon: <FaTwitter />,
@@ -117,7 +117,7 @@ export default function Contact() {
                 },
                 {
                   icon: <FaEnvelope />,
-                  link: "https://mail.google.com/mail/?view=cm&fs=1&to=rpriyanshusingh56@gmail.com",
+                  link: "https://mail.google.com/mail/?view=cm&fs=1&to=inaniridham@gmail.com",
                 },
               ].map((item, i) => (
                 <motion.a

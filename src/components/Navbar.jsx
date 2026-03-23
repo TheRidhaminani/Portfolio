@@ -10,7 +10,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <h1 className="text-xl font-bold text-orange-500">
-          Priyanshu<span className="text-white">.</span>
+          TheRidham<span className="text-white">.</span>
         </h1>
 
         {/* Desktop Menu */}
