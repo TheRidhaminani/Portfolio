@@ -7,6 +7,7 @@ const skills = {
     "Data Structures",
     "Algorithms",
     "OOP",
+    "Flask",
   ],
 
   "Data Analysis & Visualization": [
@@ -15,7 +16,8 @@ const skills = {
     "Matplotlib",
     "Seaborn",
     "Power BI",
-    "Exploratory Data Analysis (EDA)",
+    "DAX",
+    "EDA",
     "Data Cleaning",
     "Feature Engineering",
   ],
@@ -25,17 +27,32 @@ const skills = {
     "Unsupervised Learning",
     "Regression",
     "Classification",
-    "Clustering (K-Means)",
-    "Model Evaluation",
+    "K-Means Clustering",
+    "Anomaly Detection",
+    "SMOTE",
     "Scikit-learn",
   ],
 
-  "Deep Learning": [
-    "Neural Networks",
+  "Deep Learning & AI": [
+    "CNN",
+    "LSTM",
+    "CNN-LSTM Hybrid",
     "ANN",
-    "CNN (Basics)",
     "TensorFlow",
     "Keras",
+    "Signal Processing",
+    "Computer Vision",
+    "Object Detection",
+  ],
+
+  "NLP & GenAI": [
+    "NLP",
+    "TF-IDF",
+    "NLTK",
+    "LangChain",
+    "RAG",
+    "Vector Databases",
+    "LLM Integration",
   ],
 
   "Tools & Platforms": [
@@ -44,7 +61,18 @@ const skills = {
     "Google Colab",
     "VS Code",
     "Kaggle",
+    "Vercel",
+    "Postman",
   ],
+};
+
+const categoryColors = {
+  "Programming & Core": "text-blue-400",
+  "Data Analysis & Visualization": "text-green-400",
+  "Machine Learning": "text-purple-400",
+  "Deep Learning & AI": "text-orange-400",
+  "NLP & GenAI": "text-pink-400",
+  "Tools & Platforms": "text-teal-400",
 };
 
 export default function Skills() {
@@ -59,44 +87,49 @@ export default function Skills() {
       <div className="relative max-w-7xl mx-auto px-6">
 
         {/* Title */}
-        <motion.h2
+        <motion.div
+          className="text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-4xl md:text-5xl font-bold text-white"
         >
-          My <span className="text-orange-500">Skills</span>
-        </motion.h2>
-
-        <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            My <span className="text-orange-500">Skills</span>
+          </h2>
+          <div className="w-16 h-1 bg-orange-500 mx-auto mt-3 rounded" />
+          <p className="text-gray-400 mt-5 max-w-xl mx-auto">
+            From deep learning systems to business dashboards — a full-stack ML toolkit.
+          </p>
+        </motion.div>
 
         {/* Skill Cards */}
-        <div className="mt-16 grid md:grid-cols-3 gap-10">
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(skills).map(([title, items], index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="relative bg-white/5 border border-orange-500/30 rounded-2xl p-8 backdrop-blur-xl 
-                         hover:shadow-[0_0_45px_rgba(249,115,22,0.5)] transition"
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="relative bg-white/5 border border-orange-500/20 rounded-2xl p-7 backdrop-blur-xl
+                         hover:border-orange-500/50 hover:shadow-[0_0_35px_rgba(249,115,22,0.25)]
+                         transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-orange-400 mb-5">
+              <h3 className={`text-base font-semibold mb-5 ${categoryColors[title] || "text-orange-400"}`}>
                 {title}
               </h3>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {items.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-4 py-1 text-sm rounded-full 
-                               bg-orange-500/10 
-                               border border-orange-500/30 
+                    className="px-3 py-1 text-sm rounded-full
+                               bg-orange-500/10
+                               border border-orange-500/25
                                text-orange-300
-                               hover:bg-orange-500 hover:text-black
-                               transition"
+                               hover:bg-orange-500 hover:text-black hover:border-orange-500
+                               transition-all duration-200 cursor-default"
                   >
                     {skill}
                   </span>

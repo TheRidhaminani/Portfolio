@@ -4,35 +4,33 @@ import {
   FaDatabase,
   FaBrain,
   FaChartLine,
-  FaLightbulb,
+  FaWaveSquare,
 } from "react-icons/fa";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen bg-[#0b0f1a] 
-      flex items-center justify-center"
+      className="relative min-h-screen bg-[#0b0f1a] flex items-center justify-center"
     >
-      {/* CENTER WRAPPER */}
       <div className="w-full flex justify-center">
-        {/* CONTENT BOX */}
         <div className="max-w-6xl w-full px-6 py-24">
-          
+
           {/* TITLE */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
           >
             About <span className="text-orange-500">Me</span>
           </motion.h2>
+          <div className="w-16 h-1 bg-orange-500 mx-auto mb-16 rounded" />
 
           {/* TWO COLUMN */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            
+
             {/* LEFT TEXT */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -42,58 +40,58 @@ export default function About() {
               className="space-y-5 text-gray-400 text-lg leading-relaxed"
             >
               <p>
-                Hi, I’m{" "}
-                <span className="text-white font-semibold">
-                  Ridham Inani
-                </span>{" "}
-                — a{" "}
+                Hi, I'm{" "}
+                <span className="text-white font-semibold">Ridham Inani</span>{" "}
+                — a final-year B.Tech student and{" "}
                 <span className="text-orange-400">
-                  Data Analyst & Machine Learning Enthusiast
+                  GATE-qualified Data Scientist & ML Engineer
                 </span>{" "}
-                passionate about transforming raw data into actionable insights
-                and building data-driven solutions.
+                from Roorkee Institute of Technology, passionate about building
+                end-to-end AI systems that solve real problems.
               </p>
 
               <p>
-                I have secured a{" "}
-                <span className="text-orange-400 font-semibold">
-                  GATE Score of 434 (AIR 4730)
+                I built{" "}
+                <span className="text-orange-400 font-semibold">Signalyze</span>
+                {" "}— a CNN-LSTM hybrid model for RF signal classification trained
+                on 220K+ samples, achieving{" "}
+                <span className="text-white font-semibold">90%+ accuracy</span>{" "}
+                at SNR ≥ 0 dB, deployed as a full Flask web app with an
+                oscilloscope-style UI.
+              </p>
+
+              <p>
+                I've built ML pipelines, RAG chatbots, computer vision systems,
+                and interactive Power BI dashboards using{" "}
+                <span className="text-orange-400">
+                  Python, TensorFlow, SQL, Scikit-learn, LangChain, and Power BI
                 </span>
-                , reflecting strong analytical thinking, problem-solving ability,
-                and a solid grasp of core engineering concepts.
+                , with a focus on shipping complete, production-ready solutions.
               </p>
 
               <p>
-                Over the past year, I’ve analyzed complex datasets, built
-                interactive dashboards, and developed machine learning models
-                using{" "}
-                <span className="text-orange-400">
-                  Python, SQL, Power BI, Pandas, NumPy, and Scikit-learn
-                </span>{" "}
-                to uncover insights and support data-driven decision-making.
-              </p>
-
-              <p>
-                I’m passionate about uncovering patterns in data, solving
-                real-world problems, and continuously refining my expertise as a{" "}
-                <span className="text-white">
-                  data-driven problem solver
-                </span>.
+                Secured a{" "}
+                <span className="text-orange-400 font-semibold">
+                  GATE Score of 434 (AIR 4730) in Data Science & AI
+                </span>
+                {" "}— reflecting strong analytical thinking and a solid grasp of
+                core ML and CS concepts.
               </p>
 
               {/* STATS */}
-              <div className="mt-10 grid grid-cols-2 gap-6">
-                
-                <div className="border border-orange-500/30 rounded-xl p-5 text-center">
-                  <h3 className="text-3xl font-bold text-orange-400">10+</h3>
-                  <p className="text-gray-400 mt-1">Projects Completed</p>
+              <div className="mt-10 grid grid-cols-3 gap-4">
+                <div className="border border-orange-500/30 rounded-xl p-4 text-center">
+                  <h3 className="text-3xl font-bold text-orange-400">15+</h3>
+                  <p className="text-gray-400 mt-1 text-sm">Projects Built</p>
                 </div>
-
-                <div className="border border-orange-500/30 rounded-xl p-5 text-center">
+                <div className="border border-orange-500/30 rounded-xl p-4 text-center">
+                  <h3 className="text-3xl font-bold text-orange-400">90%+</h3>
+                  <p className="text-gray-400 mt-1 text-sm">Signalyze Accuracy</p>
+                </div>
+                <div className="border border-orange-500/30 rounded-xl p-4 text-center">
                   <h3 className="text-3xl font-bold text-orange-400">434</h3>
-                  <p className="text-gray-400 mt-1">GATE Score</p>
+                  <p className="text-gray-400 mt-1 text-sm">GATE Score DS&AI</p>
                 </div>
-
               </div>
             </motion.div>
 
@@ -106,10 +104,6 @@ export default function About() {
               className="flex justify-center"
             >
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
                 whileHover={{ y: -6 }}
                 className="max-w-md w-full rounded-2xl p-8
                 border border-orange-500/40
@@ -118,56 +112,59 @@ export default function About() {
                 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-6 text-center">
-                  What I Do 🚀
+                  What I Build
                 </h3>
 
                 <ul className="space-y-5 text-gray-300">
-                  
-                  <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaChartBar />
+                  <li className="flex items-start gap-4">
+                    <span className="text-orange-400 text-lg mt-0.5">
+                      <FaWaveSquare />
                     </span>
                     <span>
-                      Perform exploratory data analysis (EDA) to uncover trends & insights
+                      Deep learning models for signal processing and computer vision
+                      (CNN-LSTM, ANN, object detection)
                     </span>
                   </li>
 
-                  <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaDatabase />
-                    </span>
-                    <span>
-                      Query and manage structured data using SQL
-                    </span>
-                  </li>
-
-                  <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
+                  <li className="flex items-start gap-4">
+                    <span className="text-orange-400 text-lg mt-0.5">
                       <FaBrain />
                     </span>
                     <span>
-                      Develop machine learning models for predictive analysis
+                      End-to-end ML pipelines and RAG chatbots with LangChain and
+                      vector databases
                     </span>
                   </li>
 
-                  <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
+                  <li className="flex items-start gap-4">
+                    <span className="text-orange-400 text-lg mt-0.5">
+                      <FaChartBar />
+                    </span>
+                    <span>
+                      Interactive Power BI dashboards turning raw business data
+                      into clear, actionable insights
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-4">
+                    <span className="text-orange-400 text-lg mt-0.5">
+                      <FaDatabase />
+                    </span>
+                    <span>
+                      Data pipelines with SQL, Pandas, and feature engineering
+                      for predictive modeling
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-4">
+                    <span className="text-orange-400 text-lg mt-0.5">
                       <FaChartLine />
                     </span>
                     <span>
-                      Build interactive dashboards using Power BI
+                      Flask-deployed AI apps with clean UIs for real-world
+                      usability
                     </span>
                   </li>
-
-                  <li className="flex items-center gap-4">
-                    <span className="text-orange-400 text-lg">
-                      <FaLightbulb />
-                    </span>
-                    <span>
-                      Transform raw data into actionable business insights
-                    </span>
-                  </li>
-
                 </ul>
               </motion.div>
             </motion.div>
